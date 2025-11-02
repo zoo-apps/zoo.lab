@@ -35,7 +35,7 @@
     "bnc-notify": "^1.9.8",
     "dotenv": "^16.0.3",
     "eth-hooks": "^1.1.2",
-    "ethers": "^5.7.2",
+    "ethers": "^6.13.4",
     "fortmatic": "^2.4.0",
     "graphiql": "^1.11.5",
     "graphql": "^15.8.0",
@@ -51,7 +51,11 @@
     "react-router-dom": "^5.3.4",
     "react-scripts": "4.0.3",
     "walletlink": "^2.5.0",
-    "web3modal": "^1.9.12"
+    "web3modal": "^1.9.12",
+    "wagmi": "^2.14.6",
+    "viem": "^2.22.4",
+    "@rainbow-me/rainbowkit": "^2.2.0",
+    "@tanstack/react-query": "^5.61.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.7.8",
@@ -77,7 +81,9 @@
     "less-plugin-npm-import": "^2.1.0",
     "prettier": "^2.8.4",
     "s3-folder-upload": "^2.3.5",
-    "surge": "^0.23.1"
+    "surge": "^0.23.1",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
   },
   "eslintConfig": {
     "extends": "react-app"
