@@ -33,11 +33,15 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          CI: false
+
+      - name: Add .nojekyll file
+        run: touch ./build/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./build
 
   deploy:
     environment:
