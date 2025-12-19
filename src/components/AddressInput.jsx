@@ -2,7 +2,7 @@ import { CameraOutlined, QrcodeOutlined } from "@ant-design/icons";
 import { Badge, Input } from "antd";
 import { useLookupAddress } from "eth-hooks";
 import React, { useCallback, useState } from "react";
-import QrReader from "react-qr-reader";
+import { QrReader } from "react-qr-reader";
 import Blockie from "./Blockie";
 
 // probably we need to change value={toAddress} to address={toAddress}
@@ -90,17 +90,17 @@ export default function AddressInput(props) {
       }}
     >
       <QrReader
-        delay={250}
-        resolution={1200}
-        onError={e => {
-          console.log("SCAN ERROR", e);
-          setScan(false);
-        }}
-        onScan={newValue => {
-          if (newValue) {
+        scanDelay={250}
+        onResult={(result, error) => {
+          if (error) {
+            console.log("SCAN ERROR", error);
+            return;
+          }
+          if (result) {
+            const newValue = result?.text;
             console.log("SCAN VALUE", newValue);
             let possibleNewValue = newValue;
-            if (possibleNewValue.indexOf("/") >= 0) {
+            if (possibleNewValue && possibleNewValue.indexOf("/") >= 0) {
               possibleNewValue = possibleNewValue.substr(possibleNewValue.lastIndexOf("0x"));
               console.log("CLEANED VALUE", possibleNewValue);
             }
@@ -108,7 +108,7 @@ export default function AddressInput(props) {
             updateAddress(possibleNewValue);
           }
         }}
-        style={{ width: "100%" }}
+        containerStyle={{ width: "100%" }}
       />
     </div>
   ) : (
