@@ -38,6 +38,7 @@ jobs:
           NODE_ENV: production
           CI: false
           NODE_OPTIONS: --openssl-legacy-provider
+          DISABLE_ESLINT_PLUGIN: true
 
       - name: Add .nojekyll file
         run: touch ./build/.nojekyll
