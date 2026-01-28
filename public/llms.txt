@@ -1,0 +1,28 @@
+# Zoo Lab
+
+> Research laboratory and experimentation platform for Zoo Labs Foundation.
+
+## About
+Zoo Lab is the research laboratory and experimentation platform for Zoo Labs Foundation. It provides infrastructure for running AI experiments, publishing research, sharing datasets, and collaborating on open-source AI projects. Researchers can access compute resources, experiment tracking tools, and a community of peers working on decentralized AI and science.
+
+## Key Features
+- AI experiment infrastructure and compute access
+- Experiment tracking and reproducibility tools
+- Dataset hosting and sharing
+- Research paper drafting and collaboration
+- Open-source model development environment
+- Jupyter notebook hosting
+- GPU cluster access for training
+- Benchmarking and evaluation frameworks
+- Collaboration tools for research teams
+- Integration with Zoo governance via ZIPs
+
+## Links
+- [Website](https://zoo.lab)
+- [Zoo Labs Foundation](https://zoo.ngo)
+- [ZIPs](https://zips.zoo.ngo)
+- [GitHub](https://github.com/zoo-labs)
+
+## Contact
+- Research: research@zoo.ngo
+- Support: support@zoo.ngo
